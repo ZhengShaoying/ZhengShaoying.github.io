@@ -1,0 +1,2071 @@
+﻿定义item，normalR包含8个图片，分别为正向R顺时针旋转了0、45、90、135、180、225、270、315度的图片，
+mirrorR包含8个图片，分别为镜像R顺时针旋转了0、45、90、135、180、225、270、315度的图片，prime中则是包含了正向R、镜像R、T作为启动刺激。
+注视点item为“+”，反应正确的反馈item为“√”，反应错误的反馈item为“×”。
+<item normalR>
+/1 = "N0.bmp"
+/2 = "N45.bmp"
+/3 = "N90.bmp"
+/4 = "N135.bmp"
+/5 = "N180.bmp"
+/6 = "N225.bmp"
+/7 = "N270.bmp"
+/8 = "N315.bmp"
+</item>
+
+<item mirrorR>
+/1 = "M0.bmp"
+/2 = "M45.bmp"
+/3 = "M90.bmp"
+/4 = "M135.bmp"
+/5 = "M180.bmp"
+/6 = "M225.bmp"
+/7 = "M270.bmp"
+/8 = "M315.bmp"
+</item>
+
+<item prime>
+/1 = "N0.bmp"
+/2 = "M0.bmp"
+/3 = "T.bmp"
+</item>
+
+<item fixation>
+/1 = "+"
+</item>
+
+<item correctmsg>
+/1 = "√"
+</item>
+
+<item errormsg>
+/1 = "×"
+</item>
+
+
+定义指导语，一共五段，分别为实验开始的总指导语、练习阶段的指导语、休息阶段的指导语、正式实验的指导语、还有实验结束的指导语。
+<instruct mr_instruct>
+	/nextkey = (" ")
+	/fontstyle = ("楷体", 3%, false, false, false, false, 5, 1)
+	/txcolor = (0,0,0)
+	/screencolor = (255,255,255)
+	/lastlabel = "请按空格键继续"
+	/windowsize = (600,400)
+</instruct>
+
+<page begininstruction>^^^^您好，欢迎您参与我们的研究！^^当前实验的目的是测验您对字母R进行心理旋转的能力。^^请您尽量准确而快速地对屏幕上呈现的刺激材料进行反应。^^</page>
+
+<page practiceinstruction>^现在是练习阶段。^进行实验时请您将左手和右手的食指分别放在键盘的“F”键和“J”键上并注视屏幕中央，^首先在屏幕的中央会很闪现一个正R或反R或T，此时不需要做出反应；^接着在一段时间的黑屏之后，^会出现一个旋转了一定角度（0-360）的或正或反的大写字母“R”，请判断其正反。^如果是正的大写“R”，请按“F”键；^如果是反的大写“R”，请按“J”键。^假如您判断正确，会出现绿色的“√”^假如您判断错误，会出现红色的“×”</page>
+
+<page rest>^^^^请您稍微休息一下!^^如果您休息好了，请您按空格键进入正式实验阶段。实验将持续大概30分钟，中间您将有两次休息的机会^^</page>
+
+<page formalinstruction>^现在是正式实验阶段。^进行实验时请您将左手和右手的食指分别放在键盘的“F”键和“J”键上并注视屏幕中央，^首先在屏幕的中央会闪现一个正R或反R或T，此时不需要做出反应；^接着在一段时间的黑屏之后，^会出现一个旋转了一定角度（0-360）的或正或反的大写字母“R”，请判断其正反。^如果是正的大写“R”，请按“F”键；^如果是反的大写“R”，请按“J”键。^注意：在正式实验阶段不会有判断是否正确的反馈。</page>
+
+<page continue>^^^^请您稍微休息一下!^^休息好后，按空格键继续开始实验。^^</page>
+
+<page endinstruction>^^^^实验到此结束，非常感谢您的参与!^^现在您可以离开实验室，主试会向您支付被试费，^^再次感谢您的参与！</page>
+
+定义item对应的属性，picture  text 以及擦除时的shape
+<picture normalR0>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 1
+	/size = (300,300)
+</picture>
+
+<picture normalR45>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 2
+	/size = (300,300)
+</picture>
+
+<picture normalR90>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 3
+	/size = (300,300)
+</picture>
+
+<picture normalR135>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 4
+	/size = (300,300)
+</picture>
+
+<picture normalR180>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 5
+	/size = (300,300)
+</picture>
+
+<picture normalR225>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 6
+	/size = (300,300)
+</picture>
+
+<picture normalR270>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 7
+	/size = (300,300)
+</picture>
+
+<picture normalR315>
+	/erase = True(0,0,0) 
+	/halign = center
+	/items = normalR
+    /select = 8
+	/size = (300,300)
+</picture>
+
+<picture mirrorR0>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 1
+	/size = (300,300)
+</picture>
+
+<picture mirrorR45>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 2
+	/size = (300,300)
+</picture>
+
+<picture mirrorR90>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 3
+	/size = (300,300)
+</picture>
+
+<picture mirrorR135>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 4
+	/size = (300,300)
+</picture>
+
+<picture mirrorR180>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 5
+	/size = (300,300)
+</picture>
+
+<picture mirrorR225>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 6
+	/size = (300,300)
+</picture>
+
+<picture mirrorR270>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 7
+	/size = (300,300)
+</picture>
+
+<picture mirrorR315>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = mirrorR
+    /select = 8
+	/size = (300,300)
+</picture>
+
+<picture prime_normalR>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = prime
+    /select = 1
+	/size = (300,300)
+</picture>
+
+<picture prime_mirrorR>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = prime
+    /select = 2
+	/size = (300,300)
+</picture>
+
+<picture prime_T>
+	/erase = True(0,0,0)
+	/halign = center
+	/items = prime
+    /select = 3
+	/size = (300,300)
+</picture>
+
+<shape blank>
+	/erase = True(0,0,0)
+	/color = (black)
+    /size = (300,300)
+    /shape = rectangle
+</shape>
+
+<text fixation>
+	/items = fixation
+	/select = 1
+	/fontstyle = ("Arial", 80ptc)
+	/txbgcolor = (0,0,0)
+	/txcolor = (255,255,255)
+</text>
+
+<text correctmsg>
+	/items = correctmsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (0, 170, 0)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+<text errormsg>
+	/items = errormsg
+	/select = 1
+	/fontstyle = ("楷体", 60ptc, false, false, false, false, 5, 1)
+	/txcolor = (170, 0, 0)
+	/txbgcolor = (0, 0, 0)
+</text>
+
+定义values和expressions，在expressions中生成注视点的随机时间（1500-2000ms），以及启动刺激呈现结束后到正式刺激出现的随机黑屏的时间（1000-1500ms）。
+<values>
+	/fixationtime = 0
+    /primetime = 0
+	/shapeonetime = 0
+	/stimulustime = 0
+    /shapetwotime = 0
+</values>
+
+<expressions>
+	/generaterandomfixation = ceil(rand(1500,2000))
+	/generaterandomshapeone = ceil(rand(1000,1500))
+</expressions>
+
+定义trial，练习trial和正式trial的类型一致，各有48个（3【启动类型有一致启动，不一致启动，中性启动】*2【正向的R和镜像的R】*8【旋转角度0-315，以45为公差】），
+练习trial与正式trial之间的唯一区别在于正式的trial不会有反馈，练习的trial会有。对于normalR，设置正确反应为“F”，对于
+mirrorR，设置正确反应为“J”。每个trial的有效反应都是“F”和“J”。在每一个trial中，先呈现注视点，时间随机，为1500-2000ms，接着呈现
+启动刺激，时间为30ms，接着是擦除的黑屏，时间随机，为1000-1500ms，接着是正式刺激，时间为500ms，在正式刺激呈现时记录反应时，接着是黑屏。
+当记录到有效按键反应，即进入下一个trial。
+<trial practice_prime_normal_normalR0>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR0.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR0.insertstimulustime(picture.normalR0,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR0>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR0.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR0.insertstimulustime(picture.normalR0,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR0>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR0.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR0.insertstimulustime(picture.normalR0,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR45>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR45.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR45.insertstimulustime(picture.normalR45,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR45>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR45.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR45.insertstimulustime(picture.normalR45,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR45>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR45.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR45.insertstimulustime(picture.normalR45,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR90>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR90.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR90.insertstimulustime(picture.normalR90,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR90>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR90.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR90.insertstimulustime(picture.normalR90,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR90>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR90.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR90.insertstimulustime(picture.normalR90,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR135>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR135.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR135.insertstimulustime(picture.normalR135,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR135>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR135.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR135.insertstimulustime(picture.normalR135,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR135>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR135.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR135.insertstimulustime(picture.normalR135,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR180>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR180.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR180.insertstimulustime(picture.normalR180,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR180>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR180.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR180.insertstimulustime(picture.normalR180,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR180>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR180.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR180.insertstimulustime(picture.normalR180,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR225>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR225.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR225.insertstimulustime(picture.normalR225,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR225>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR225.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR225.insertstimulustime(picture.normalR225,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR225>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR225.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR225.insertstimulustime(picture.normalR225,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR270>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR270.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR270.insertstimulustime(picture.normalR270,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR270>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR270.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR270.insertstimulustime(picture.normalR270,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR270>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR270.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR270.insertstimulustime(picture.normalR270,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_normalR315>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_normalR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR315.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_normalR315.insertstimulustime(picture.normalR315,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_normalR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_normalR315>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR315.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_normalR315.insertstimulustime(picture.normalR315,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_normalR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_normalR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_normalR315>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_normalR315.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_normalR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_normalR315.insertstimulustime(picture.normalR315,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_normalR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_normalR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR0>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR0.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR0.insertstimulustime(picture.mirrorR0,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+
+<trial practice_prime_mirror_mirrorR0>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR0.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR0.insertstimulustime(picture.mirrorR0,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR0>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR0.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR0.insertstimulustime(picture.mirrorR0,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR45>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR45.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR45.insertstimulustime(picture.mirrorR45,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR45>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR45.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR45.insertstimulustime(picture.mirrorR45,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR45>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR45.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR45.insertstimulustime(picture.mirrorR45,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR90>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR90.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR90.insertstimulustime(picture.mirrorR90,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR90>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR90.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR90.insertstimulustime(picture.mirrorR90,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR90>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR90.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR90.insertstimulustime(picture.mirrorR90,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR135>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR135.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR135.insertstimulustime(picture.mirrorR135,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR135>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR135.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR135.insertstimulustime(picture.mirrorR135,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR135>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR135.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR135.insertstimulustime(picture.mirrorR135,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR180>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR180.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR180.insertstimulustime(picture.mirrorR180,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR180>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR180.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR180.insertstimulustime(picture.mirrorR180,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR180>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR180.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR180.insertstimulustime(picture.mirrorR180,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR225>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR225.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR225.insertstimulustime(picture.mirrorR225,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR225>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR225.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR225.insertstimulustime(picture.mirrorR225,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR225>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR225.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR225.insertstimulustime(picture.mirrorR225,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR270>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR270.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR270.insertstimulustime(picture.mirrorR270,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR270>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR270.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR270.insertstimulustime(picture.mirrorR270,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR270>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR270.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR270.insertstimulustime(picture.mirrorR270,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_normal_mirrorR315>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR315.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_normal_mirrorR315.insertstimulustime(picture.mirrorR315,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_normal_mirrorR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_normal_mirrorR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_mirror_mirrorR315>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR315.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_mirror_mirrorR315.insertstimulustime(picture.mirrorR315,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_mirror_mirrorR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_mirror_mirrorR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial practice_prime_T_mirrorR315>
+	/pretrialpause = 500
+	/correctmessage = (correctmsg,500)
+	/errormessage =  (errormsg,500)
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR315.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.practice_prime_T_mirrorR315.insertstimulustime(picture.mirrorR315,values.shapeonetime)]
+    /ontrialbegin = [trial.practice_prime_T_mirrorR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.practice_prime_T_mirrorR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR0>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR0.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR0.insertstimulustime(picture.normalR0,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR0>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR0.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR0.insertstimulustime(picture.normalR0,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR0>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR0.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR0.insertstimulustime(picture.normalR0,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR45>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR45.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR45.insertstimulustime(picture.normalR45,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR45>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR45.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR45.insertstimulustime(picture.normalR45,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR45>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR45.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR45.insertstimulustime(picture.normalR45,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR90>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR90.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR90.insertstimulustime(picture.normalR90,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR90>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR90.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR90.insertstimulustime(picture.normalR90,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR90>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR90.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR90.insertstimulustime(picture.normalR90,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR135>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR135.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR135.insertstimulustime(picture.normalR135,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR135>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR135.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR135.insertstimulustime(picture.normalR135,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR135>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR135.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR135.insertstimulustime(picture.normalR135,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR180>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR180.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR180.insertstimulustime(picture.normalR180,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR180>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR180.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR180.insertstimulustime(picture.normalR180,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR180>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR180.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR180.insertstimulustime(picture.normalR180,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR225>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR225.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR225.insertstimulustime(picture.normalR225,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR225>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR225.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR225.insertstimulustime(picture.normalR225,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR225>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR225.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR225.insertstimulustime(picture.normalR225,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR270>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR270.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR270.insertstimulustime(picture.normalR270,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR270>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR270.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR270.insertstimulustime(picture.normalR270,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR270>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR270.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR270.insertstimulustime(picture.normalR270,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_normalR315>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_normalR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR315.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_normalR315.insertstimulustime(picture.normalR315,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_normalR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_normalR315>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR315.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_normalR315.insertstimulustime(picture.normalR315,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_normalR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_normalR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_normalR315>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_normalR315.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_normalR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_normalR315.insertstimulustime(picture.normalR315,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_normalR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_normalR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR0>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR0.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR0.insertstimulustime(picture.mirrorR0,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_normalR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+
+<trial formal_prime_mirror_mirrorR0>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR0.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR0.insertstimulustime(picture.mirrorR0,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR0>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR0.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR0.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR0.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR0.insertstimulustime(picture.mirrorR0,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR0.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR0.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR45>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR45.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR45.insertstimulustime(picture.mirrorR45,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR45>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR45.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR45.insertstimulustime(picture.mirrorR45,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR45>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR45.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR45.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR45.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR45.insertstimulustime(picture.mirrorR45,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR45.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR45.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR90>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR90.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR90.insertstimulustime(picture.mirrorR90,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR90>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR90.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR90.insertstimulustime(picture.mirrorR90,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR90>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR90.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR90.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR90.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR90.insertstimulustime(picture.mirrorR90,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR90.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR90.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR135>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR135.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR135.insertstimulustime(picture.mirrorR135,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR135>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR135.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR135.insertstimulustime(picture.mirrorR135,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR135>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR135.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR135.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR135.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR135.insertstimulustime(picture.mirrorR135,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR135.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR135.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR180>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR180.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR180.insertstimulustime(picture.mirrorR180,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR180>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR180.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR180.insertstimulustime(picture.mirrorR180,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR180>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("F")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR180.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR180.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR180.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR180.insertstimulustime(picture.mirrorR180,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR180.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR180.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR225>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR225.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR225.insertstimulustime(picture.mirrorR225,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR225>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR225.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR225.insertstimulustime(picture.mirrorR225,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR225>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR225.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR225.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR225.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR225.insertstimulustime(picture.mirrorR225,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR225.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR225.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR270>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR270.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR270.insertstimulustime(picture.mirrorR270,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR270>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR270.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR270.insertstimulustime(picture.mirrorR270,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR270>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR270.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR270.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR270.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR270.insertstimulustime(picture.mirrorR270,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR270.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR270.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_normal_mirrorR315>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR315.insertstimulustime(picture.prime_normalR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_normal_mirrorR315.insertstimulustime(picture.mirrorR315,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_normal_mirrorR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_normal_mirrorR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_mirror_mirrorR315>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR315.insertstimulustime(picture.prime_mirrorR,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_mirror_mirrorR315.insertstimulustime(picture.mirrorR315,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_mirror_mirrorR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_mirror_mirrorR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+<trial formal_prime_T_mirrorR315>
+	/pretrialpause = 500
+	/validresponse = ("F","J")
+	/correctresponse = ("J")
+	/ontrialbegin = [values.fixationtime = expressions.generaterandomfixation]
+	/ontrialbegin = [values.primetime = values.fixationtime + 30]
+	/ontrialbegin = [values.shapeonetime = values.primetime + expressions.generaterandomshapeone]
+    /ontrialbegin = [values.stimulustime = values.shapeonetime + 500]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR315.insertstimulustime(picture.prime_T,values.fixationtime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR315.insertstimulustime(text.fixation, 0)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR315.insertstimulustime(shape.blank,values.primetime)]
+	/ontrialbegin = [trial.formal_prime_T_mirrorR315.insertstimulustime(picture.mirrorR315,values.shapeonetime)]
+    /ontrialbegin = [trial.formal_prime_T_mirrorR315.insertstimulustime(shape.blank,values.stimulustime)]
+	/ontrialend = [trial.formal_prime_T_mirrorR315.clearstimulusframes()]
+	/beginresponsetime = values.shapeonetime
+</trial>
+
+
+
+
+定义5个block，分别为练习阶段的指导语，练习阶段，休息阶段，正式实验的指导语，正式实验。
+<block startpracticeblock>
+	/screencolor = (255,255,255)
+	/preinstructions = (practiceinstruction)
+</block>
+
+<block practiceblock>
+    /screencolor = (0,0,0)
+    /blockfeedback = (meanlatency,correct)
+	/trials = [1-16 = random(practice_prime_normal_normalR0,practice_prime_normal_normalR45,practice_prime_normal_normalR90,formal_prime_normal_normalR135,
+practice_prime_normal_normalR180,practice_prime_normal_normalR225,practice_prime_normal_normalR270,practice_prime_normal_normalR315,
+practice_prime_mirror_mirrorR0,practice_prime_mirror_mirrorR45,practice_prime_mirror_mirrorR90,practice_prime_mirror_mirrorR135,
+practice_prime_mirror_mirrorR180,practice_prime_mirror_mirrorR225,practice_prime_mirror_mirrorR270,practice_prime_mirror_mirrorR315,
+practice_prime_mirror_normalR0,practice_prime_mirror_normalR45,practice_prime_mirror_normalR90,practice_prime_mirror_normalR135,
+practice_prime_mirror_normalR180,practice_prime_mirror_normalR225,practice_prime_mirror_normalR270,practice_prime_mirror_normalR315,
+practice_prime_normal_mirrorR0,practice_prime_normal_mirrorR45,practice_prime_normal_mirrorR90,practice_prime_normal_mirrorR135,
+practice_prime_normal_mirrorR180,practice_prime_normal_mirrorR225,practice_prime_normal_mirrorR270,practice_prime_normal_mirrorR315,
+practice_prime_T_normalR0,practice_prime_T_normalR45,practice_prime_T_normalR90,practice_prime_T_normalR135,
+practice_prime_T_normalR180,practice_prime_T_normalR225,practice_prime_T_normalR270,practice_prime_T_normalR315,
+practice_prime_T_mirrorR0,practice_prime_T_mirrorR45,practice_prime_T_mirrorR90,practice_prime_T_mirrorR135,
+practice_prime_T_mirrorR180,practice_prime_T_mirrorR225,practice_prime_T_mirrorR270,practice_prime_T_mirrorR315)]
+</block>
+
+<block restblock>
+    /screencolor = (255,255,255)
+    /preinstructions = (rest)
+</block>
+
+<block startformalblock>
+	/screencolor = (255,255,255)
+	/preinstructions = (formalinstruction)
+</block>
+
+
+<block formalblock>
+    /screencolor = (0,0,0)
+	/blockfeedback = (meanlatency,correct)
+	/trials = [1-96 = random(formal_prime_normal_normalR0,formal_prime_normal_normalR45,formal_prime_normal_normalR90,formal_prime_normal_normalR135,
+formal_prime_normal_normalR180,formal_prime_normal_normalR225,formal_prime_normal_normalR270,formal_prime_normal_normalR315,
+formal_prime_mirror_mirrorR0,formal_prime_mirror_mirrorR45,formal_prime_mirror_mirrorR90,formal_prime_mirror_mirrorR135,
+formal_prime_mirror_mirrorR180,formal_prime_mirror_mirrorR225,formal_prime_mirror_mirrorR270,formal_prime_mirror_mirrorR315,
+formal_prime_mirror_normalR0,formal_prime_mirror_normalR45,formal_prime_mirror_normalR90,formal_prime_mirror_normalR135,
+formal_prime_mirror_normalR180,formal_prime_mirror_normalR225,formal_prime_mirror_normalR270,formal_prime_mirror_normalR315,
+formal_prime_normal_mirrorR0,formal_prime_normal_mirrorR45,formal_prime_normal_mirrorR90,formal_prime_normal_mirrorR135,
+formal_prime_normal_mirrorR180,formal_prime_normal_mirrorR225,formal_prime_normal_mirrorR270,formal_prime_normal_mirrorR315,
+formal_prime_T_normalR0,formal_prime_T_normalR45,formal_prime_T_normalR90,formal_prime_T_normalR135,
+formal_prime_T_normalR180,formal_prime_T_normalR225,formal_prime_T_normalR270,formal_prime_T_normalR315,
+formal_prime_T_mirrorR0,formal_prime_T_mirrorR45,formal_prime_T_mirrorR90,formal_prime_T_mirrorR135,
+formal_prime_T_mirrorR180,formal_prime_T_mirrorR225,formal_prime_T_mirrorR270,formal_prime_T_mirrorR315)]
+</block>
+
+<block continueblock>
+    /screencolor = (255,255,255)
+    /preinstructions = (continue)
+</block>
+
+
+定义experiment，先呈现开始实验的指导语，然后是练习模块的指导语，然后是练习block，然后是休息block，然后是正式实验的指导语block，
+接着是正式的3个实验block，中间有两次休息时间，最后是实验结束，送别被试的指导语。
+<expt>
+	/preinstructions = (begininstruction)
+	/blocks = [1 = startpracticeblock; 2 = practiceblock; 3 = restblock; 4 = startformalblock; 5 = formalblock;
+6 = continueblock; 7 = formalblock; 8 = continueblock; 9 = formalblock]
+	/postinstructions = (endinstruction)
+</expt>
+
+
+
+
